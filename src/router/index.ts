@@ -43,6 +43,19 @@ const routes: RouteRecordRaw[] = [
       title: 'OnlyOffice API 编辑器'
     }
   },
+  {
+    path: '/editors/ckeditor5',
+    name: 'ckeditor5',
+    component: () => import('../views/editors/ckeditor5.vue'),
+  },
+  {
+    path: '/editors/onlyoffice-gptver',
+    name: 'OnlyOfficeGptver',
+    component: () => import('../views/editors/onlyoffice-gptver.vue'),
+    meta: {
+      title: 'OnlyOffice GPT版本编辑器'
+    }
+  },
   // 兼容旧路由
   {
     path: '/editor',
