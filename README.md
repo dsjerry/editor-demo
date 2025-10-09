@@ -1,6 +1,25 @@
 # 多编辑器文档平台
 
+[English](./README_EN.md) | 中文
+
 这是一个基于 Vue 3 + TypeScript + Vue Router 的多编辑器文档平台，集成了多种文档编辑器，包括 OnlyOffice、Canvas Editor、CKEditor5 和 Monaco Editor，为用户提供多样化的文档编辑体验。
+
+## 📋 目录
+
+- [项目特性](#-项目特性)
+- [项目结构](#-项目结构)
+- [路由配置](#-路由配置)
+- [主要功能](#-主要功能)
+- [项目依赖](#-项目依赖)
+- [快速开始](#-快速开始)
+- [使用说明](#-使用说明)
+- [自定义配置](#-自定义配置)
+- [样式说明](#-样式说明)
+- [编辑器对比](#-编辑器对比)
+- [响应式支持](#-响应式支持)
+- [调试功能](#-调试功能)
+- [贡献](#-贡献)
+- [许可证](#-许可证)
 
 ## 🚀 项目特性
 
@@ -43,18 +62,18 @@ src/
 
 项目包含以下路由：
 
-| 路径 | 组件 | 描述 |
-| --- | --- | --- |
-| `/` | Home | 首页 - 编辑器选择和功能对比 |
-| `/editors` | EditorsIndex | 编辑器选择页面 |
-| `/editors/onlyoffice` | OnlyOfficeEditor | OnlyOffice 编辑器页面 |
-| `/editors/canvas-editor` | CanvasEditor | Canvas Editor 编辑器页面 |
-| `/editors/ckeditor5` | CKEditor5 | CKEditor5 编辑器页面 |
-| `/editors/monaco-editor` | MonacoEditor | Monaco 差异对比编辑器页面 |
-| `/editors/onlyoffice-api` | OnlyOfficeByAPI | OnlyOffice API 编辑器页面 |
-| `/editors/onlyoffice-gptver` | OnlyOfficeGptver | OnlyOffice GPT版本编辑器页面 |
+| 路径                             | 组件               | 描述                         |
+| -------------------------------- | ------------------ | ---------------------------- |
+| `/`                            | Home               | 首页 - 编辑器选择和功能对比  |
+| `/editors`                     | EditorsIndex       | 编辑器选择页面               |
+| `/editors/onlyoffice`          | OnlyOfficeEditor   | OnlyOffice 编辑器页面        |
+| `/editors/canvas-editor`       | CanvasEditor       | Canvas Editor 编辑器页面     |
+| `/editors/ckeditor5`           | CKEditor5          | CKEditor5 编辑器页面         |
+| `/editors/monaco-editor`       | MonacoEditor       | Monaco 差异对比编辑器页面    |
+| `/editors/onlyoffice-api`      | OnlyOfficeByAPI    | OnlyOffice API 编辑器页面    |
+| `/editors/onlyoffice-gptver`   | OnlyOfficeGptver   | OnlyOffice GPT版本编辑器页面 |
 | `/editors/onlyoffice-docspace` | OnlyOfficeDocSpace | OnlyOffice DocSpace 集成页面 |
-| `/*` | NotFound | 404 页面 |
+| `/*`                           | NotFound           | 404 页面                     |
 
 ## 🎯 主要功能
 
@@ -68,6 +87,7 @@ src/
 ### 2. 编辑器功能对比
 
 首页提供编辑器功能对比表，包含以下对比项：
+
 - 文档格式支持
 - 协作功能
 - 插件系统
@@ -283,12 +303,12 @@ const routes: RouteRecordRaw[] = [
 
 ## 📊 编辑器对比
 
-| 编辑器 | 文档格式支持 | 协作功能 | 插件系统 | 性能表现 | 学习成本 | 集成方式 | 特色功能 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| OnlyOffice | Word, Excel, PPT | ✅ 多人实时协作 | 有限 | 高 | 中等 | Vue 组件 | 完整的 Office 功能 |
-| Canvas Editor | 富文本 | ❌ | ✅ 丰富插件 | 高 | 低 | Vue 组件 | 轻量级设计 |
-| CKEditor5 | 富文本 | ✅ 协作编辑 | ✅ 丰富插件 | 中 | 中等 | Vue 组件 | 现代化编辑体验 |
-| Monaco Editor | 代码 | ❌ | ✅ 语法高亮 | 高 | 中等 | Vue 组件 | 代码差异对比 |
+| 编辑器        | 文档格式支持     | 协作功能        | 插件系统    | 性能表现 | 学习成本 | 集成方式 | 特色功能           |
+| ------------- | ---------------- | --------------- | ----------- | -------- | -------- | -------- | ------------------ |
+| OnlyOffice    | Word, Excel, PPT | ✅ 多人实时协作 | 有限        | 高       | 中等     | Vue 组件 | 完整的 Office 功能 |
+| Canvas Editor | 富文本           | ❌              | ✅ 丰富插件 | 高       | 低       | Vue 组件 | 轻量级设计         |
+| CKEditor5     | 富文本           | ✅ 协作编辑     | ✅ 丰富插件 | 中       | 中等     | Vue 组件 | 现代化编辑体验     |
+| Monaco Editor | 代码             | ❌              | ✅ 语法高亮 | 高       | 中等     | Vue 组件 | 代码差异对比       |
 
 ## 🤝 贡献
 
@@ -297,6 +317,7 @@ const routes: RouteRecordRaw[] = [
 ## 📄 许可证
 
 MIT License
+
 - 渐变背景和现代化 UI
 - 平滑过渡动画效果
 
@@ -327,6 +348,6 @@ MIT License
 
 ---
 
-**开发服务器地址：** http://localhost:5174/
+**开发服务器地址：** [http://localhost:5174/](http://localhost:5174/)
 
 **项目启动成功！** 🎉

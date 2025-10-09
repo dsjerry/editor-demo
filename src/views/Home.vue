@@ -17,8 +17,7 @@
 
                     <div class="card-content">
                         <p class="editor-description">
-                            专业的在线办公套件，支持 Word、Excel、PowerPoint
-                            文档的在线编辑和协作。
+                            专业的在线办公套件，支持 Word、Excel、PowerPoint 文档的在线编辑和协作。
                         </p>
 
                         <div class="features-list">
@@ -42,15 +41,8 @@
                     </div>
 
                     <div class="card-actions">
-                        <button class="btn btn-primary" @click="goToOnlyOffice">
-                            进入 OnlyOffice
-                        </button>
-                        <button
-                            class="btn btn-secondary"
-                            @click="learnMore('onlyoffice')"
-                        >
-                            了解更多
-                        </button>
+                        <button class="btn btn-primary" @click="goToOnlyOffice">进入 OnlyOffice</button>
+                        <button class="btn btn-secondary" @click="learnMore('onlyoffice')">了解更多</button>
                     </div>
                 </div>
 
@@ -62,10 +54,7 @@
                     </div>
 
                     <div class="card-content">
-                        <p class="editor-description">
-                            基于 Canvas
-                            的现代化富文本编辑器，支持插件扩展和自定义功能。
-                        </p>
+                        <p class="editor-description">基于 Canvas 的现代化富文本编辑器，支持插件扩展和自定义功能。</p>
 
                         <div class="features-list">
                             <div class="feature-item">
@@ -88,18 +77,8 @@
                     </div>
 
                     <div class="card-actions">
-                        <button
-                            class="btn btn-primary"
-                            @click="goToCanvasEditor"
-                        >
-                            进入 Canvas Editor
-                        </button>
-                        <button
-                            class="btn btn-secondary"
-                            @click="learnMore('canvas-editor')"
-                        >
-                            了解更多
-                        </button>
+                        <button class="btn btn-primary" @click="goToCanvasEditor">进入 Canvas Editor</button>
+                        <button class="btn btn-secondary" @click="learnMore('canvas-editor')">了解更多</button>
                     </div>
                 </div>
 
@@ -153,9 +132,7 @@
                     </div>
 
                     <div class="card-content">
-                        <p class="editor-description">
-                            功能强大的富文本编辑器，提供现代化的编辑体验和丰富的插件生态。
-                        </p>
+                        <p class="editor-description">功能强大的富文本编辑器，提供现代化的编辑体验和丰富的插件生态。</p>
 
                         <div class="features-list">
                             <div class="feature-item">
@@ -178,15 +155,8 @@
                     </div>
 
                     <div class="card-actions">
-                        <button class="btn btn-primary" @click="goToCKEditor5">
-                            进入 CKEditor5
-                        </button>
-                        <button
-                            class="btn btn-secondary"
-                            @click="learnMore('ckeditor5')"
-                        >
-                            了解更多
-                        </button>
+                        <button class="btn btn-primary" @click="goToCKEditor5">进入 CKEditor5</button>
+                        <button class="btn btn-secondary" @click="learnMore('ckeditor5')">了解更多</button>
                     </div>
                 </div>
 
@@ -241,8 +211,7 @@
 
                     <div class="card-content">
                         <p class="editor-description">
-                            VS Code
-                            同源的代码编辑器，支持语法高亮、智能提示和差异对比功能。
+                            VS Code 同源的代码编辑器，支持语法高亮、智能提示和差异对比功能。
                         </p>
 
                         <div class="features-list">
@@ -266,18 +235,8 @@
                     </div>
 
                     <div class="card-actions">
-                        <button
-                            class="btn btn-primary"
-                            @click="goToMonacoEditor"
-                        >
-                            进入 Monaco Editor
-                        </button>
-                        <button
-                            class="btn btn-secondary"
-                            @click="learnMore('monaco-editor')"
-                        >
-                            了解更多
-                        </button>
+                        <button class="btn btn-primary" @click="goToMonacoEditor">进入 Monaco Editor</button>
+                        <button class="btn btn-secondary" @click="learnMore('monaco-editor')">了解更多</button>
                     </div>
                 </div>
 
@@ -397,43 +356,59 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from "vue-router"
-import Navigation from "../components/Navigation.vue"
+import { useRouter } from 'vue-router';
+import Navigation from '../components/Navigation.vue';
 
-const router = useRouter()
+const router = useRouter();
 
 const goToOnlyOffice = () => {
-    router.push("/editors/onlyoffice")
-}
+    router.push('/editors/onlyoffice');
+};
 
 const goToCanvasEditor = () => {
-    router.push("/editors/canvas-editor")
-}
+    router.push('/editors/canvas-editor');
+};
 
 const goToOnlyOfficeAPI = () => {
-    router.push("/editors/onlyoffice-by-api")
-}
+    router.push('/editors/onlyoffice-by-api');
+};
 
 const goToCKEditor5 = () => {
-    router.push("/editors/ckeditor5")
-}
+    router.push('/editors/ckeditor5');
+};
 
 const goToOnlyOfficeGptver = () => {
-    router.push("/editors/onlyoffice-gptver")
-}
+    router.push('/editors/onlyoffice-gptver');
+};
 
 const goToMonacoEditor = () => {
-    router.push("/editors/monaco-editor")
-}
+    router.push('/editors/monaco-editor');
+};
 
 const goToOnlyOfficeDocSpace = () => {
-    router.push("/editors/onlyoffice-docspace")
-}
+    router.push('/editors/onlyoffice-docspace');
+};
 
 const learnMore = (editor: string) => {
     // 这里可以添加更多信息的逻辑
-    console.log(`了解更多关于 ${editor} 的信息`)
-}
+    console.log(`了解更多关于 ${editor} 的信息`);
+    switch (editor) {
+        case 'onlyoffice':
+            window.open('https://www.onlyoffice.com/', '_blank');
+            break;
+        case 'canvas-editor':
+            window.open('https://hufe.club/canvas-editor-docs/', '_blank');
+            break;
+        case 'ckeditor5':
+            window.open('https://ckeditor.com/ckeditor-5/', '_blank');
+            break;
+        case 'monaco-editor':
+            window.open('https://microsoft.github.io/monaco-editor/', '_blank');
+            break;
+        default:
+            break;
+    }
+};
 </script>
 
 <style scoped>

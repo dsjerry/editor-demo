@@ -1,21 +1,21 @@
 <template>
-  <div style="display: flex; flex-direction: column; height: 100vh">
-    <Navigation />
-    <vue-monaco-diff-editor
-      theme="vs-light"
-      :original="oldText"
-      :modified="newText"
-      language="text"
-      :options="OPTIONS"
-      @mount="handleMount"
-    />
-  </div>
+    <div style="display: flex; flex-direction: column; height: 100vh">
+        <Navigation />
+        <vue-monaco-diff-editor
+            theme="vs-light"
+            :original="oldText"
+            :modified="newText"
+            :options="OPTIONS"
+            language="text"
+            @mount="handleMount"
+        />
+    </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, shallowRef } from "vue";
-import { VueMonacoDiffEditor } from "@guolao/vue-monaco-editor";
-import Navigation from "../../components/Navigation.vue";
+import { ref, shallowRef } from 'vue';
+import { VueMonacoDiffEditor } from '@guolao/vue-monaco-editor';
+import Navigation from '../../components/Navigation.vue';
 
 const oldText = ref(`甲方：张三
 乙方：李四
@@ -28,23 +28,23 @@ const newText = ref(`甲方：张三
 `);
 
 const OPTIONS = {
-  automaticLayout: true,
-  formatOnType: true,
-  formatOnPaste: true,
-  readOnly: false,
+    automaticLayout: true,
+    formatOnType: true,
+    formatOnPaste: true,
+    readOnly: false
+    // lineNumbers: 'off' // 隐藏行号显示
 };
 
 const diffEditor = shallowRef();
-const handleMount = (diffEditorInstance) =>
-  (diffEditor.value = diffEditorInstance);
+const handleMount = diffEditorInstance => (diffEditor.value = diffEditorInstance);
 
 // get the original value
 function getOriginalValue() {
-  return diffEditor.value.getOriginalEditor().getValue();
+    return diffEditor.value.getOriginalEditor().getValue();
 }
 
 // get the modified value
 function getModifiedValue() {
-  return diffEditor.value.getModifiedEditor().getValue();
+    return diffEditor.value.getModifiedEditor().getValue();
 }
 </script>
