@@ -56,14 +56,21 @@ const routes: RouteRecordRaw[] = [
       title: 'OnlyOffice GPT版本编辑器'
     }
   },
-  // 兼容旧路由
   {
-    path: '/editor',
-    redirect: '/editors/onlyoffice'
+    path: '/editors/monaco-editor',
+    name: 'MonacoEditor',
+    component: () => import('../views/editors/monaco-editor.vue'),
+    meta: {
+      title: 'Monaco 差异对比编辑器'
+    }
   },
   {
-    path: '/tripdocs',
-    redirect: '/editors/canvas-editor'
+    path: '/editors/onlyoffice-docspace',
+    name: 'OnlyOfficeDocSpace',
+    component: () => import('../views/editors/onlyoffice-docspace.vue'),
+    meta: {
+      title: 'OnlyOffice DocSpace 集成'
+    }
   },
   {
     path: '/canvas-editor',

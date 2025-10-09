@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-vue": "^7.3.0",
+    "@guolao/vue-monaco-editor": "^1.5.5",
     "@hufe921/canvas-editor-plugin-barcode1d": "^0.0.3",
     "@hufe921/canvas-editor-plugin-barcode2d": "^0.0.4",
     "@hufe921/canvas-editor-plugin-case": "^0.0.1",
@@ -20,6 +21,7 @@
     "@hufe921/canvas-editor-plugin-floating-toolbar": "^0.0.4",
     "@onlyoffice/document-editor-vue": "^1.6.1",
     "ckeditor5": "^46.1.1",
+    "monaco-editor": "^0.54.0",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
   },
