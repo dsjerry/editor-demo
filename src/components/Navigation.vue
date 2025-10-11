@@ -43,6 +43,16 @@
                 >
                     Monaco Diff
                 </router-link>
+
+                <router-link
+                    to="/editors/tinymce"
+                    class="nav-link"
+                    :class="{
+                        active: $route.path === '/editors/tinymce',
+                    }"
+                >
+                    TinyMCE
+                </router-link>
             </div>
         </div>
     </nav>

@@ -65,6 +65,14 @@ const routes: RouteRecordRaw[] = [
     }
   },
   {
+    path: '/editors/tinymce',
+    name: 'TinyMCEEditor',
+    component: () => import('../views/editors/tinymce.vue'),
+    meta: {
+      title: 'TinyMCE 富文本编辑器'
+    }
+  },
+  {
     path: '/editors/onlyoffice-docspace',
     name: 'OnlyOfficeDocSpace',
     component: () => import('../views/editors/onlyoffice-docspace.vue'),

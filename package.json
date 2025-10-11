@@ -20,6 +20,7 @@
     "@hufe921/canvas-editor-plugin-excel": "^0.0.1",
     "@hufe921/canvas-editor-plugin-floating-toolbar": "^0.0.4",
     "@onlyoffice/document-editor-vue": "^1.6.1",
+    "@tinymce/tinymce-vue": "^6.3.0",
     "ckeditor5": "^46.1.1",
     "monaco-editor": "^0.54.0",
     "vue": "^3.5.18",

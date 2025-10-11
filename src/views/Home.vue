@@ -240,6 +240,44 @@
                     </div>
                 </div>
 
+                <!-- TinyMCE 编辑器卡片 -->
+                <div class="editor-card tinymce-card">
+                    <div class="card-header">
+                        <div class="editor-icon">📝</div>
+                        <h2>TinyMCE 编辑器</h2>
+                    </div>
+
+                    <div class="card-content">
+                        <p class="editor-description">
+                            功能强大的WYSIWYG编辑器，提供直观的编辑体验和丰富的内容创作功能。
+                        </p>
+
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">✏️</span>
+                                <span>所见即所得</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔌</span>
+                                <span>丰富插件</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📱</span>
+                                <span>响应式设计</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🌐</span>
+                                <span>多语言支持</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn btn-primary" @click="goToTinyMCE">进入 TinyMCE</button>
+                        <button class="btn btn-secondary" @click="learnMore('tinymce')">了解更多</button>
+                    </div>
+                </div>
+
                 <!-- OnlyOffice DocSpace 编辑器卡片 -->
                 <!-- <div class="editor-card onlyoffice-docspace-card">
           <div class="card-header">
@@ -294,6 +332,7 @@
                                 <th>OnlyOffice</th>
                                 <th>Canvas Editor</th>
                                 <th>CKEditor5</th>
+                                <th>TinyMCE</th>
                                 <th>Monaco Editor</th>
                             </tr>
                         </thead>
@@ -303,6 +342,7 @@
                                 <td>Word, Excel, PowerPoint</td>
                                 <td>富文本, Markdown</td>
                                 <td>富文本, Markdown</td>
+                                <td>富文本, HTML</td>
                                 <td>代码文件</td>
                             </tr>
                             <tr>
@@ -310,11 +350,13 @@
                                 <td>✅ 实时协作</td>
                                 <td>❌ 单用户</td>
                                 <td>✅ 支持协作</td>
+                                <td>✅ 支持协作</td>
                                 <td>❌ 单用户</td>
                             </tr>
                             <tr>
                                 <td>插件系统</td>
                                 <td>❌ 有限扩展</td>
+                                <td>✅ 丰富插件</td>
                                 <td>✅ 丰富插件</td>
                                 <td>✅ 丰富插件</td>
                                 <td>✅ 扩展支持</td>
@@ -324,11 +366,13 @@
                                 <td>⚡ 中等</td>
                                 <td>⚡⚡ 高性能</td>
                                 <td>⚡⚡ 高性能</td>
+                                <td>⚡⚡ 高性能</td>
                                 <td>⚡⚡⚡ 极高性能</td>
                             </tr>
                             <tr>
                                 <td>学习成本</td>
                                 <td>📚 熟悉的界面</td>
+                                <td>📖 简单易用</td>
                                 <td>📖 简单易用</td>
                                 <td>📖 简单易用</td>
                                 <td>📖 开发者友好</td>
@@ -338,6 +382,7 @@
                                 <td>🔧 Vue 封装</td>
                                 <td>🎨 Canvas 渲染</td>
                                 <td>🔧 Vue 组件</td>
+                                <td>🔧 Vue 组件</td>
                                 <td>💻 Web 编辑器</td>
                             </tr>
                             <tr>
@@ -345,6 +390,7 @@
                                 <td>完整办公套件</td>
                                 <td>轻量级设计</td>
                                 <td>丰富插件生态</td>
+                                <td>所见即所得</td>
                                 <td>代码差异对比</td>
                             </tr>
                         </tbody>
@@ -385,6 +431,10 @@ const goToMonacoEditor = () => {
     router.push('/editors/monaco-editor');
 };
 
+const goToTinyMCE = () => {
+    router.push('/editors/tinymce');
+};
+
 const goToOnlyOfficeDocSpace = () => {
     router.push('/editors/onlyoffice-docspace');
 };
@@ -404,6 +454,9 @@ const learnMore = (editor: string) => {
             break;
         case 'monaco-editor':
             window.open('https://microsoft.github.io/monaco-editor/', '_blank');
+            break;
+        case 'tinymce':
+            window.open('https://www.tiny.cloud/', '_blank');
             break;
         default:
             break;
@@ -483,6 +536,10 @@ const learnMore = (editor: string) => {
     border-color: #4caf50;
 }
 
+.tinymce-card:hover {
+    border-color: #00a8ff;
+}
+
 .onlyoffice-docspace-card:hover {
     border-color: #ff5722;
 }
@@ -523,6 +580,10 @@ const learnMore = (editor: string) => {
 
 .monaco-editor-card .editor-icon {
     background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+}
+
+.tinymce-card .editor-icon {
+    background: linear-gradient(135deg, #00a8ff 0%, #0066cc 100%);
 }
 
 .onlyoffice-docspace-card .editor-icon {
